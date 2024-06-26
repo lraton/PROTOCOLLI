@@ -56,13 +56,16 @@ interface GigabitEthernet0/2
  shutdown
 !
 interface GigabitEthernet0/0/0
- ip address 192.168.69.18 255.255.255.252
+ ip address 192.168.69.2 255.255.255.252
+ no shutdown
 !
 interface GigabitEthernet0/1/0
- ip address 192.168.69.6 255.255.255.252
+ ip address 192.168.69.21 255.255.255.252
+ no shutdown
 !
 interface GigabitEthernet0/2/0
- ip address 192.168.69.25 255.255.255.252
+ ip address 192.168.69.17 255.255.255.252
+ no shutdown
 !
 interface GigabitEthernet0/3/0
  no ip address
@@ -74,13 +77,11 @@ interface Vlan1
 !
 router rip
  version 2
- network 192.168.69.4
- network 192.168.69.24
+ network 192.168.2.0
  network 192.168.69.16
  no auto-summary
 !
-ip classless
-!
+ip classless!
 ip flow-export version 9
 !
 !
